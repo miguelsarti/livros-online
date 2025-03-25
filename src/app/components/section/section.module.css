@@ -1,0 +1,461 @@
+.bookSection {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionHeading {
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    margin: 0;
+    font-family: inherit;
+  }
+  
+  .viewAll {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  
+  .viewAll:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
+  
+  .booksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .bookCard {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    animation: fadeIn 0.5s ease forwards;
+    box-sizing: border-box;
+  }
+  
+  .bookCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bookCover {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--gray-100);
+  }
+  
+  .coverImage {
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  
+  .bookCard:hover .coverImage {
+    transform: scale(1.05);
+  }
+  
+  .quickViewButton {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    padding: 0.5rem;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+  
+  .bookCard:hover .quickViewButton {
+    bottom: 0;
+  }
+  
+  .bookInfo {
+    padding: 1.5rem;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .newBadge {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    background-color: var(--success-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .bookTitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    font-family: inherit;
+  }
+  
+  .bookAuthor {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bookRating {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    color: #ffc107;
+    font-size: 1rem;
+  }
+  
+  .starEmpty {
+    color: var(--gray-300);
+  }
+  
+  .starHalf {
+    position: relative;
+    color: var(--gray-300);
+  }
+  
+  .starHalf::after {
+    content: "★";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffc107;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .ratingValue {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--light-text);
+  }
+  
+  .bookTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tag {
+    background-color: var(--gray-200);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    color: var(--light-text);
+  }
+  
+  .bookPriceActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bookPrice {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+  }
+  
+  .bookActions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* CATEGORIES SECTION STYLES */
+  .categoriesSection {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    box-sizing: border-box;
+  }
+  
+  .categoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .categoryCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    animation: fadeIn 0.5s ease forwards;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+  }
+  
+  .categoryCard:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-5px);
+  }
+  
+  .categoryIcon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .categoryName {
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  /* NEW RELEASES SECTION STYLES */
+  .newReleases {
+    background-color: var(--gray-100);
+  }
+  
+  /* SUBSCRIPTION SECTION STYLES */
+  .subscriptionSection {
+    background: linear-gradient(
+      135deg,
+      var(--primary-light),
+      var(--primary-color)
+    );
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .subscriptionContent {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .subscriptionHeading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+  }
+  
+  .subscriptionText {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .subscriptionForm {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .subscriptionInput {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+  }
+  
+  .subscribeButton {
+    background-color: var(--secondary-color);
+    color: var(--primary-dark);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    font-weight: bold;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+  
+  .subscribeButton:hover {
+    background-color: #02c4b2;
+  }
+  
+  .shoppingCart {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Hidden by default */
+    width: 380px;
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .shoppingCartOpen {
+    right: 0;
+  }
+  
+  .cartHeader {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-300);
+    box-sizing: border-box;
+  }
+  
+  .cartHeaderTitle {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-family: inherit;
+  }
+  
+  .closeButton {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+  }
+  
+  .closeButton:hover {
+    color: var(--error-color);
+  }
+  
+  .cartItems {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  .emptyCartMessage {
+    text-align: center;
+    color: var(--light-text);
+    padding: 2rem 0;
+  }
+  
+  .cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    box-sizing: border-box;
+  }
+  
+  .itemInfo {
+    flex: 1;
+  }
+  
+  .itemTitle {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+  }
+  
+  .itemDetails {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--light-text);
+  }
+  
+  .itemQuantity {
+    margin: 0;
+  }
+  
+  .itemPrice {
+    margin: 0;
+  }
+  
+  .removeButton {
+    color: var(--light-text);
+    font-size: 1rem;
+    padding: 0.3rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+  }
+  
+  .removeButton:hover {
+    color: var(--error-color);
+  }
+  
+  .cartFooter {
+    padding: 1.5rem;
+    border-top: 1px solid var(--gray-300);
+    box-sizing: border-box;
+  }
+  
+  .cartTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .totalLabel {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .totalValue {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+  }
+  
+  .checkoutButton {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: var(--transition);
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+  
+  .checkoutButton:hover {
+    background-color: var(--primary-dark);
+  }
